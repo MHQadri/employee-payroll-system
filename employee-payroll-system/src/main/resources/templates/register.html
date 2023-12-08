@@ -1,0 +1,103 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Form</title>
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style="background-image: url(/img/emp-bg.jpg); background-size: cover;">
+
+
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+		</label>
+		<label class="logo">Employee Payroll System</label>
+		<ul>
+			<li><a class="active" href="/">Home</a></li>
+			<li><a href="reg_form">Register</a></li>
+			<li><a href="employees_list">Employees</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">About Us</a></li>
+		</ul>
+	</nav>
+
+
+
+	<!-- Body of Form starts -->
+	<div class="container">
+		<h1 style="margin-bottom: 50px; text-align: center;color: white;">Registeration Form</h1>
+		<form action="register" method="post">
+			<!--First name-->
+			<div class="box">
+				<label for="firstName" class="fl fontLabel">Name: </label>
+				<div class="new iconBox">
+					<i class="fa fa-user" aria-hidden="true"></i>
+				</div>
+				<div class="fr">
+					<input type="text" name="name" placeholder="Name" class="textBox" autofocus="on" required>
+				</div>
+				<div class="clr"></div>
+			</div>
+			<!--First name-->
+
+			<!---Phone No.------>
+			<div class="box">
+				<label for="phone" class="fl fontLabel"> Phone No.: </label>
+				<div class="fl iconBox"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
+				<div class="fr">
+					<input type="text" required name="phone" maxlength="10" placeholder="Phone No." class="textBox">
+				</div>
+				<div class="clr"></div>
+			</div>
+			<!---Phone No.---->
+
+
+			<!---Email ID---->
+			<div class="box">
+				<label for="email" class="fl fontLabel"> Email ID: </label>
+				<div class="fl iconBox"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+				<div class="fr">
+					<input type="email" required name="email" placeholder="Email Id" class="textBox">
+				</div>
+				<div class="clr"></div>
+			</div>
+			<!--Email ID----->
+
+
+			<!---Salary------>
+			<div class="box">
+				<label for="text" class="fl fontLabel"> Salary </label>
+				<div class="fl iconBox"><i class="fa-solid fa-indian-rupee-sign" aria-hidden="true"></i></div>
+				<div class="fr">
+					<input type="text" required name="salary" placeholder="Salary" class="textBox">
+				</div>
+				<div class="clr"></div>
+			</div>
+			<!---Salary---->
+
+			<!---Password------>
+			<div class="box">
+				<label for="password" class="fl fontLabel"> Password </label>
+				<div class="fl iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
+				<div class="fr">
+					<input type="Password" required name="password" placeholder="Password" class="textBox">
+				</div>
+				<div class="clr"></div>
+			</div>
+			<!---Password---->
+
+			<!---Submit Button------>
+			<div class="box" style="background: #2d3e3f">
+				<input type="Submit" name="Submit" class="submit" value="SUBMIT">
+			</div>
+
+		</form>
+	</div>
+
+</body>
+
+</html>

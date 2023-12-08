@@ -1,0 +1,65 @@
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+
+<head>
+	<meta charset="utf-8">
+	<title>Home</title>
+	<link href="css/employee.css" type="text/css" rel="stylesheet">
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	
+</head>
+
+<body>
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+		</label>
+		<label class="logo">Employee Payroll System</label>
+		<ul>
+			<li><a class="active" href="/">Home</a></li>
+			<li><a href="reg_form">Register</a></li>
+			<li><a href="employees_list">Employees</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">About Us</a></li>
+		</ul>
+	</nav>
+	
+	<div >
+		<a href="salary-calculator"><button class="sal-btn tb-btn">Salary Calculator</button></a>		
+	</div>
+
+	<!--Table Start Here-->
+
+	<h2>Employees List</h2>
+	<div class="table-wrapper">
+		<table class="fl-table">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Phone</th>
+					<th>Email</th>
+					<th>Salary</th>
+					<th>Edit</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="e :${employees}">
+					<td th:text="${e.id}"></td>
+					<td th:text="${e.name}"></td>
+					<td th:text="${e.phone}"></td>
+					<td th:text="${e.email}"></td>
+					<td th:text="${e.salary}"></td>
+					<td><a th:href="@{/editEmployee/{id}(id=${e.id})}"><button class="tb-btn">Edit</button></a></td>
+					<td ><a th:href="@{/deleteEmployee/{id}(id=${e.id})}"><button class="tb-btn">Delete</button></a></td>
+				</tr>
+			<tbody>
+		</table>
+	</div>
+	<!--Table Ends Here!-->
+</body>
+
+</html>
